@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "azuretriggeraks-bc15"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "azuretriggeraks-bc15"
+  template:
+    metadata:
+      labels:
+        app: "azuretriggeraks-bc15"
+    spec:
+      containers:
+        - name: "azuretriggeraks-bc15"
+          image: "acrd62kd5oifovc2.azurecr.io/azuretriggeraks"
+          ports:
+          - containerPort: 8080
