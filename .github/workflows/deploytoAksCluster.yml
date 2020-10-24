@@ -40,7 +40,7 @@ jobs:
        
     - uses: azure/k8s-deploy@v1.2
       with:
-        namespace: azuretriggeraks5600
+        namespace : azuretriggeraks5600
         manifests: |
           manifests/deployment.yml
           manifests/service.yml
